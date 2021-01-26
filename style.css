@@ -1,0 +1,101 @@
+body{
+	/* background: #fff; */
+	background-image: url('images/bcg.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.cart{
+	margin: 100px 0;
+	background-color: rgba(255,255,255,0.7);
+	padding: 60px 0;
+}
+.total-price{
+	padding-bottom: 15px;
+}
+.cart-title{
+	background-color: #F6F5FA;
+	border-radius: 10px;
+	padding: 10px 25px;
+	margin-bottom: 20px;
+}
+.cart-item{
+	background-color: #F6F5FA;
+	border-radius: 10px;
+	padding: 25px;
+	margin-bottom: 20px;
+}
+.center-title,
+.center-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.center-title>h5{
+	font-size: 17px;
+	color: #444444;
+}
+.cart-item img{
+	width: 115px;
+}
+.cart-item h5{
+    padding: 0 45px;
+}
+.cart-item .remove-item{
+	width: 25px!important;
+	padding: 3px;
+	margin-right: 15px;
+	cursor: pointer;
+}
+.btn-default{
+	background-color: #fff;
+}
+.cart-item .form-control{
+	background-color: #F6F5FA;
+	border: none;
+    width: 65px;
+    border-radius: 10px!important;
+    font-weight: 700;
+    font-size: 20px;
+}
+.bg-coupon{
+	background-color: lightyellow;
+}
+.cart-item .coupon-box{
+	background-color: #fff;
+	width: 100%;
+	border: 1px solid #2FBE70;
+}
+.coupon-btn{
+	font-size: 19px;
+	background-color: #2FBE70;
+	border: 1px solid #2FBE70;
+}
+.input-group{
+	width: unset;
+}
+.status{
+	text-align: right;
+}
+.check-out{
+    float: right;
+    padding: 10px 30px;
+	font-size: 19px;
+	background-color: #2FBE70;
+	border: none;
+}
+.discount{
+	display: none;
+	color: #666666;
+}
+.condition{
+	font-size: 14px;
+}
+.info-one,
+.info-two{
+	display: none;
+}
+.coupon-err{
+	display: none;
+}
