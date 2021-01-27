@@ -10,6 +10,7 @@ function couponCheck(){
         document.getElementById('coupon-discount').innerHTML = discount.toFixed(1);
     }
     else{
+        alert('Spend mininum $200 to avail the discount.');
         document.getElementById('coupon-discount').innerHTML = 0;    // no discount if less than 200 spent
     }
 }

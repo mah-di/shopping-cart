@@ -125,14 +125,13 @@ document.getElementById('coupon-button').addEventListener('click', function(){  
         coupon = true;                                     // couponCheck function to be run
         couponCheck();
         
-        document.querySelector('.coupon-err').style.display = 'none';
         document.getElementsByClassName('discount')[0].style.display = 'block';
         document.getElementsByClassName('discount')[1].style.display = 'block';
         
     }
     else{
         coupon = false;                                    // couponCheck function not to be run
-        document.querySelector('.coupon-err').style.display = 'block';
+        alert('Invalid coupon code. Please use a valid coupon.');
         document.getElementsByClassName('discount')[0].style.display = 'none';
         document.getElementsByClassName('discount')[1].style.display = 'none';
     }
