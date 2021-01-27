@@ -123,7 +123,7 @@ document.getElementById('coupon-button').addEventListener('click', function(){  
 
     if(couponCode == "COUPON"){                            // cheacking coupon validity
         coupon = true;                                     // couponCheck function to be run
-        couponCheck();
+        cartCalc();                                        // cart status updated
         
         document.getElementsByClassName('discount')[0].style.display = 'block';
         document.getElementsByClassName('discount')[1].style.display = 'block';
@@ -131,8 +131,11 @@ document.getElementById('coupon-button').addEventListener('click', function(){  
     }
     else{
         coupon = false;                                    // couponCheck function not to be run
+        document.getElementById('coupon-discount').innerHTML = 0;     // resetting discount value incase valid coupon was used
+        cartCalc();                                     // cart status updated
+
         alert('Invalid coupon code. Please use a valid coupon.');
-        
+
         document.getElementsByClassName('discount')[0].style.display = 'none';
         document.getElementsByClassName('discount')[1].style.display = 'none';
         document.getElementById('coupon').value = '';
