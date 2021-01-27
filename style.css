@@ -96,3 +96,13 @@ body{
 .info-two{
 	display: none;
 }
+.undo{
+	display: none;
+}
+.btn-undo{
+	border: 2px solid yellow;
+	margin-left: 30vw;
+}
+.btn-close-undo{
+	border: 2px solid red;
+}
