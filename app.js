@@ -9,17 +9,53 @@ cartCalc();                            // function called for calculating cart s
 document.getElementById('remove-one').addEventListener('click', function(){            // function for removing product one from cart list
     document.getElementById('price-one').innerHTML = 0;
     document.getElementById('product-one').style.display = 'none';
-
+    document.getElementById('undo-one').style.display = 'block';
+    
     cartCalc();                        // function called to adjust cart status
 });
+
+
+document.getElementById('undo-btn-one').addEventListener('click', function(){           // function for undoing accidental product one removal
+
+    document.getElementById('undo-one').style.display = 'none';                 // hide undo dialogue box
+    document.getElementById('product-one').style.display = 'flex';
+    let quantity = parseFloat(document.getElementById('quantity-one').value);
+    document.getElementById('price-one').innerHTML = priceOne * quantity;
+    
+    cartCalc();                          // function called to adjust cart status after undoing changes 
+})
+
+
+document.getElementById('close-undo-btn-one').addEventListener('click', function(){     // function for closing product one undo removal dialogue box
+    document.getElementById('undo-one').style.display = 'none';
+
+})
 
 
 document.getElementById('remove-two').addEventListener('click', function(){             // function for removing product two from cart list
     document.getElementById('price-two').innerHTML = 0;
     document.getElementById('product-two').style.display = 'none';
-
+    document.getElementById('undo-two').style.display = 'block';
+    
     cartCalc();                        // function called to adjust cart status
 });
+
+
+document.getElementById('undo-btn-two').addEventListener('click', function(){           // function for undoing accidental product two removal
+    
+    document.getElementById('undo-two').style.display = 'none';                 // hide undo dialogue box
+    document.getElementById('product-two').style.display = 'flex';
+    let quantity = parseFloat(document.getElementById('quantity-two').value);
+    document.getElementById('price-two').innerHTML = priceTwo * quantity;
+    
+    cartCalc();                          // function called to adjust cart status after undoing changes 
+})
+
+
+document.getElementById('close-undo-btn-two').addEventListener('click', function(){     // function for closing product two undo removal dialogue box
+    document.getElementById('undo-two').style.display = 'none';
+
+})
 
 
 document.getElementById('increment-one').addEventListener('click', function(){          // function for quantity increment for product one
