@@ -127,12 +127,14 @@ document.getElementById('coupon-button').addEventListener('click', function(){  
         
         document.getElementsByClassName('discount')[0].style.display = 'block';
         document.getElementsByClassName('discount')[1].style.display = 'block';
-        
+        document.getElementById('coupon').value = '';
     }
     else{
         coupon = false;                                    // couponCheck function not to be run
         alert('Invalid coupon code. Please use a valid coupon.');
+        
         document.getElementsByClassName('discount')[0].style.display = 'none';
         document.getElementsByClassName('discount')[1].style.display = 'none';
+        document.getElementById('coupon').value = '';
     }
 })
